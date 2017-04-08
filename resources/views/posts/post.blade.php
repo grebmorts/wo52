@@ -7,7 +7,7 @@
   <p class="blog-post-meta">
     @if (count($post->tags))
       @foreach ($post->tags as $tag)
-      <a href="/posts/tags/{{ $tag->name }}">
+      <a href={{ url('/posts/tags/{tag}') }}>
         {{ $tag->name }} |
       </a>
       @endforeach
@@ -16,7 +16,7 @@
 
     @if (count($post->user))
       @if (Auth::check() && Auth::user()->roles->pluck('name')->contains('admin'))
-          <a href="/users/{{ $post->user->id }}">[Näytä profiili]</a>
+          <a href={{ url('/users/{id}') }}>[Näytä profiili]</a>
       @endif
       {{ $post->user->name }} |
     @else

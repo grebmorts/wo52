@@ -33,7 +33,7 @@
 
     <hr />
 
-    <p><a href="/register">Rekisteröidy tästä</a>, jos sinulla ei vielä ole tiliä.
+    <p><a href={{ url('/register') }}>Rekisteröidy tästä</a>, jos sinulla ei vielä ole tiliä.
 
     </p>
 
