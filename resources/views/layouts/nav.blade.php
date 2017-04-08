@@ -5,7 +5,7 @@
       <a class="nav-link" href={{ url('/posts/create') }}>Kirjoita uusi</a>
 
       @if (Auth::check() && Auth::user()->roles->pluck('name')->contains('admin'))
-          <a class="nav-link" href="/users">Käyttäjien hallinta</a>
+          <a class="nav-link" href={{ url('/users') }}>Käyttäjien hallinta</a>
       @endif
 
 

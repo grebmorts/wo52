@@ -45,7 +45,7 @@
       @foreach ($tags as $tag)
         <li>
 
-          <a href="/posts/tags/{{ $tag }}">
+          <a href={{ url('/posts/tags/{tag}') }}>
             {{ $tag }}
           </a>
 

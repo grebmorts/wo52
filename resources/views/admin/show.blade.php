@@ -54,7 +54,7 @@
 
     @if (count($user->posts))
       @foreach ($user->posts as $post)
-      <a href="/posts/{{ $post->id }}">
+      <a href={{ url('/posts/{id}') }}>
         {{ $post->title }}
       </a>
         <hr />
@@ -65,7 +65,7 @@
     @if (count($user->comments))
       <p class="blog-post-meta">Kommentit:</p>
       @foreach ($user->comments as $comment)
-        <a href="/posts/{{ $comment->post_id }}">
+        <a href={{ url('/posts/{id}') }}>
         <i>{{ $comment->post_id }}</i></a> |
         {{ $comment->body }}
         <hr />

@@ -2,7 +2,7 @@
   <li>
 
 
-  <a href="/users/{{ $user->id }}">
+  <a href={{ url('/users/{id}') }}>
     {{ $user->name }}
   </a>
 
