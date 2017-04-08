@@ -8,7 +8,7 @@
 
     <hr />
 
-    <form method="POST" action="/posts">
+    <form method="POST" action={{ url('/posts') }}>
 
       {{ csrf_field() }}
 

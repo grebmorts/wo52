@@ -90,7 +90,7 @@
 
         <div class="card-block">
 
-          <form method="POST" action="/posts/{{ $post->id }}/comments">
+          <form method="POST" action={{ url('/posts/{id}/comments') }}>
 
             {{ csrf_field() }}
 

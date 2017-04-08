@@ -6,7 +6,7 @@
 
     <h1>Rekisteröidy</h1>
 
-    <form method="POST" action="/register">
+    <form method="POST" action={{ url('/register') }}>
 
       {{ csrf_field() }}
 

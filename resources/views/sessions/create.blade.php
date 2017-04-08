@@ -6,7 +6,7 @@
 
     <h1>Kirjaudu sisään</h1>
 
-    <form method="POST" action="/login">
+    <form method="POST" action={{ url('/login') }}>
 
       {{ csrf_field() }}
 
