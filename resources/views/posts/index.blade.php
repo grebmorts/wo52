@@ -12,7 +12,7 @@
 
           <hr />
 
-          <nav class="blog-pagination">
+            <nav class="blog-pagination">
             @if ($posts->hasMorePages())
               <a class="btn btn-outline-primary" href="{{ $posts->nextPageUrl() }}">Older</a>
             @else

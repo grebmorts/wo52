@@ -24,7 +24,7 @@ class PostController extends Controller
   {
 
     $posts = Post::latest()
-      ->filter(request(['month', 'year']))
+      //->filter(request(['month', 'year']))
       ->paginate(10);
       //->get();
 
@@ -119,7 +119,7 @@ class PostController extends Controller
     Post::where('id', $id)
       ->update(['title' => $title]);
 
-      
+
     session()->flash('message', 'Postauksesi on päivitetty.');
     return redirect('/');
 
