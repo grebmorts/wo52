@@ -9,7 +9,7 @@
 
         <div class="btn-group" role="group" aria-label="Basic example">
 
-        <form method="POST" action='/posts/{{ $post->id }}/delete'>
+        <form method="POST" action={{ url('/posts/'.$post->id.'/delete') }}>
 
             {{ csrf_field() }}
 
@@ -19,7 +19,7 @@
             <button type="submit" class="btn btn-outline-danger btn-sm">Poista julkaisu</button>
           </form>
 
-          <form method="GET" action='/posts/{{ $post->id }}/edit'>
+          <form method="GET" action={{ url('/posts/'.$post->id.'/edit') }}>
 
             {{ csrf_field() }}
 

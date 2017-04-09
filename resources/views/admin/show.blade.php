@@ -9,7 +9,8 @@
         <div class="btn-group" role="group" aria-label="Basic example">
 
           @if (!$user->roles->pluck('name')->contains('admin'))
-          <form method="POST" action="/users/{{ $user->id }}/delete">
+
+          <form method="POST" action={{ url('/users/'.$user->id.'/delete') }}>
 
               {{ csrf_field() }}
 
@@ -24,7 +25,7 @@
 
             @if (!($user->roles->pluck('name')->contains('moderator')||$user->roles->pluck('name')->contains('admin')))
 
-              <form method="POST" action="/users/{{ $user->id }}/moderate">
+              <form method="POST" action={{ url('/users/'.$user->id.'/moderate') }}>
 
                 {{ csrf_field() }}
 
@@ -36,7 +37,7 @@
 
             @if ($user->roles->pluck('name')->contains('moderator'))
 
-              <form method="POST" action="/users/{{ $user->id }}/demoderate">
+              <form method="POST" action={{ url('/users/'.$user->id.'/demoderate') }}>
 
                 {{ csrf_field() }}
 
