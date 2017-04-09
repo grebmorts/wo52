@@ -26,22 +26,26 @@ class AdminController extends Controller
 
   }
 
-  public function destroy($id){
+  public function destroy(Request $request){
 
     // delete
-      $user = User::find($id);
-      $user->delete();
+      $id = $request->input('id');
+      User::where('id', $id)
+      ->delete();
 
       // redirect
       session()->flash('message', 'Käyttäjä poistettu!');
       return redirect('/users');
   }
 
-  public function makeMod($id){
+  public function makeMod(Request $request){
+
+      $id = $request->input('id');
+
 
       $user = User::find($id);
 
-      //$role = \App\Role(['name' => 1]);
+
       $user->roles()->attach(2);
 
 
@@ -51,11 +55,13 @@ class AdminController extends Controller
       return redirect()->back();
   }
 
-  public function unmakeMod($id){
+  public function unmakeMod(Request $request){
+
+      $id = $request->input('id');
+
 
       $user = User::find($id);
 
-      //$role = \App\Role(['name' => 1]);
       $user->roles()->detach(2);
 
 

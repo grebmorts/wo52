@@ -88,9 +88,10 @@ class PostController extends Controller
   }
 
 
-  public function edit($id){
+  public function edit(Request $request){
 
-    $post = Post::find($id);
+    $id = $request->input('id');
+    $post = Post::where('id', $id)->first();
 
     return view('posts.edit')->with('post', $post);
 
@@ -126,11 +127,13 @@ class PostController extends Controller
   }
 
 
-  public function destroy($id){
+  public function destroy(Request $request){
 
     // delete
-      $post = Post::find($id);
-      $post->delete();
+
+      $id = $request->input('id');
+      Post::where('id', $id)
+      ->delete();
 
       // redirect
       session()->flash('message', 'Julkaisu poistettu!');

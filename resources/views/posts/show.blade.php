@@ -9,7 +9,7 @@
 
         <div class="btn-group" role="group" aria-label="Basic example">
 
-        <form method="POST" action='/posts/{{ $post->id }}/delete'>
+        <form method="POST" action='/posts/{id}/delete'>
 
             {{ csrf_field() }}
 
@@ -19,7 +19,7 @@
             <button type="submit" class="btn btn-outline-danger btn-sm">Poista julkaisu</button>
           </form>
 
-          <form method="GET" action='/posts/{{ $post->id }}/edit'>
+          <form method="GET" action='/posts/{id}/edit'>
 
             {{ csrf_field() }}
 
@@ -63,7 +63,7 @@
         <li class="list-group-item">
 
           <strong>
-            @if (count($comment->user))              
+            @if (count($comment->user))
               {{ $comment->user->name }} |
             @else
               (<i>Käyttäjä poistettu</i>) |
