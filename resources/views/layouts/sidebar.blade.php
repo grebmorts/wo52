@@ -8,7 +8,7 @@
     <h4>Mistä on kyse?</h4>
     <p><b>Mietityyttääkö, että kannattaako tuhlata aikaa TV-sarjaan, elokuvaan tai kirjaan?</b></p>
 
-    <p><em>IMDB:n tai muiden palveluiden määlyt ovat kujalla AF - on turha vetää
+    <p><em>IMDB:n tai muiden palveluiden määlyt ovat kujalla AF - on turhaa yrittää tehdä
       johtopäätöksiä niiden arvostelujen perusteella.</em></p>
     <p><b><em> Luota siis meihin, ystäviisi!
     </em></b></p>

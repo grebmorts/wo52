@@ -8,7 +8,7 @@
 
     <hr />
 
-    <form method="POST" action={{ url('/posts/{post}/edit') }}>
+    <form method="POST" action={{ url('/posts/'.$post->id.'/edit') }}>
 
       <input type="hidden" name="id" value="{{ $post->id }}">
 

@@ -24,7 +24,7 @@
 <div class="blog-header">
   <div class="container">
     <h1 class="blog-title">Vertaissuositukset</h1>
-    <p class="lead blog-description">Suosittele ja kommentoi suosituksia!
-    Vertaissuositukset - tärppejä kaikesta populaarikulttuurista</p>
+    <p class="lead blog-description">Suosittele ja kommentoi!
+    Vertaissuositukset - tärppejä kaikesta populaarikulttuurista.</p>
   </div>
 </div>

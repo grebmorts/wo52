@@ -12,6 +12,12 @@ class PostgresGrammar extends Grammar
      *
      * @var array
      */
+
+     public function getDateFormat()
+      {
+      return 'Y-m-d H:i:s.u';
+      }
+
     protected $operators = [
         '=', '<', '>', '<=', '>=', '<>', '!=',
         'like', 'not like', 'between', 'ilike',

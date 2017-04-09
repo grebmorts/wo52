@@ -34,7 +34,7 @@ class AdminController extends Controller
 
       // redirect
       session()->flash('message', 'Käyttäjä poistettu!');
-      return redirect('/');
+      return redirect('/users');
   }
 
   public function makeMod($id){

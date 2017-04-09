@@ -40,17 +40,13 @@ Route::group(['middleware' => 'auth'], function () {
   Route::post('/posts', 'PostController@store');
   Route::post('/posts/{post}/comments', 'CommentController@store');
 
+});
+
 // guest
 
 
 Route::get('/posts/{post}', 'PostController@show');
 Route::get('/posts/tags/{tag}', 'TagController@index');
-
-
-
-
-
-});
 
 // admin-näkymä & pyynnöt
 
